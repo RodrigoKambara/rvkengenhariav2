@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 225 70% 57%;  /* Royal Blue (#4169E1) */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 225 70% 57%;
+    --radius: 0.5rem;
+  }
+}
+
+.service-card {
+  @apply bg-white rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.1)] 
+         border-2 border-gray-100 
+         hover:border-[#4169E1] hover:shadow-[0_8px_16px_rgba(0,0,0,0.15)]
+         transition-all duration-300;
+}
+
+.section-title {
+  @apply text-3xl font-bold text-gray-900 mb-6;
+}
+
+.section-text {
+  @apply text-gray-800 text-lg leading-relaxed;
+}
+
+.nav-link {
+  @apply text-[#4169E1] hover:text-[#2850c8] font-medium 
+         transition-colors duration-300;
+}
+
+
+
+.hero-section {
+  background-image: url("https://images.unsplash.com/photo-1737853006230-4c6b22418aea?q=80&w=2087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-section > div {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+/* SUPPORT NEXTJS ERROR UI */
+nextjs-portal {
+  display: none;
+}
